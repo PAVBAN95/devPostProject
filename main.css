@@ -1,141 +1,146 @@
-/* reset browser styles */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1.2;
-}
-ol { 
-	padding-left: 1.4em;
-	list-style: decimal;
-}
-ul {
-	padding-left: 1.4em;
-	list-style: square;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} 
-
-/* end reset browser styles */
-
-body {
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	
+body{
+	font-family: Alegreya Sans;
 }
 
-
-header{
-	background: #00c0ff;
-	height: 74px;
+.nav{
+	z-index: 8 !important;
+}
+.navbar-inverse {
+    background-color: RGBA(34, 34, 34, 0.37);
+    border-color: RGBA(216, 177, 177, 0.16);
 }
 
-footer{
-	position: absolute;
-	width: 100%;
-	height: 50px;
-	top: 624px;
-	background: #111;
+.navbar-brand{
+	border-right: 1px solid #AEAEAE;
+	border-left: 1px solid #AEAEAE;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 
-#main{
-	height: 600px;
-	background: #F1FFEC;
+.navbar-brand:hover{
+	background-color:#AEAEAE !important;
+	color: #000000 !important;
 }
-
-#icon{
-	width: 70px;
-	height: 50px;
-	background: #8eeafb;
-	position: relative;
-	left: 30px;
-	top: 10px;
+.navbar-nav a{
+	border-left: 1px solid #AEAEAE;
+	font-size: 1.5em;
 }
-
-#text1{
-	width: 100%;
-	display: inline-block;
+.navbar-nav a:hover{
+	background-color:#AEAEAE !important;
+	color: #000000 !important;
+}
+.intro{
 	text-align: center;
-	margin-top: 200px;
-	font-size: 60px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: url("hd-fitness-wallpaper-5-background-wallpaper.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 855px;
 }
-
-#text2{
-	width: 100%;
-	display: inline-block;
-	text-align: center;
-	font-size: 25px;
-	margin-top: 20px;
-	margin-bottom: 40px;
+.bg-overlay{
+	background: rgba(0,0,0, 0.3);
+	height: 855px;
 }
-
-#button_div{
-	text-align: center;
+.intro-message{
+	padding-top: 20%;
+	padding-bottom: 20%;
 }
-
-#icon{
-	width: 70px;
-	height: 50px;
-	background: #A7B2B4;
-	position: absolute;
+.intro-message > h1{
+	font-size: 5em;
+	font-weight: bold;
+	color: #FD0100;
+	text-decoration: line-through;
+	letter-spacing: 2px;
+	text-shadow: 3px 3px 3px #FECC01;
 }
-
-#t1{
-	width: 48%;
-	float: left;
+.intro-message > h3{
+	font-size: 3em;
+	letter-spacing: 2px;
+	font-family: Tangerine;
+	color: #FDFDFD;
+	text-shadow: 2px 2px 2px #AEAEAE;
+	padding-bottom: 5%;
+	border-bottom: 3px solid #f8f8f8;
 }
-
-#t2{
-	float: left;
-	width: 48%;
+.intro-message > ul{
+	margin-top: 50px;
 }
-
-#login{
-	font-size: 20px;
+.intro-message > ul > li > a{
 	padding: 10px;
-	width: 260px;
 }
-
-#signup{
-	font-size: 20px;
-	padding: 10px;
-	width: 260px;
-}
-
-.clear:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
-}
-
-@media (max-width: 563px) {
-		#login{
-			font-size: 20px;
-		padding: 10px;
-		width: 260px;
-		margin: 14px;
-		}
-
-		#t1{
-			display: inline-block;
-		width: 100%;
+@media(max-width: 767px){
+	.intro-message > h1{
+		font-size: 3em;
 	}
-
-	#t2{
-		display: inline-block;
-		width: 100%;
+	.intro-message > h3{
+		font-size: 1.5em;
+		font-family: Tangerine;
 	}
+	.intro-message > ul{
+		margin-top: 40px;
+	}
+	.intro-message > ul > li{
+		display: block;
+		margin-bottom: 30px;
+	}
+}
+.btn {
+	display: inline-block;
+	letter-spacing: 2px;
+	color: #000000;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+	transition: 0.3s;
+}
+.btn:hover {
+	background-color: #286090;
+	border: 5px solid #AEAEAE;
+	display: inline-block;
+	letter-spacing: 3px;
+	color: #000000;
+	font-weight: bold;
+	font-size: 2em;
+}
 
+.personal {
+	height: 855px;
+	background: url("http://p1.pichost.me/i/45/1686464.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+#about-content{
+	padding: 50px 0 50px 0;
+}
+#about-content > h1 {
+	font-size: 4em;
+	font-family: Tangerine;
+	font-weight: bold;
+	color: #007FFF;
+	letter-spacing: 2px;
+	text-shadow: 3px 3px 3px #FECC01;
+}
+
+#about-content > p{
+	font-size: 2em;
+	color: #AEAEAE;
+	letter-spacing: 1px;
+}
+
+#dark {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: RGBA(0, 0, 0, 0.71);
+    z-index: 20;
+    visibility: hidden;
+}
+
+#popmenu {
+	width: 80%;
+	height: 80%;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	z-index: 40;
+	position: fixed;
+	margin: 5% 0% 0px 10%;
+	visibility: hidden;
 }
