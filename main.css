@@ -1,66 +1,94 @@
 body{
-	font-family: Alegreya Sans;
+	/*font-family: 'Open Sans Condensed', sans-serif !important;*/
+	/*font-family: 'Abel', sans-serif;*/
+	/*font-family: 'Poiret One', cursive;*/
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	height: 5px !important;
+	color: rgba(34, 34, 34, 0.37) !important;
+	background-color: rgba(34, 34, 34, 0.8) !important;
+	border-color: rgba(216, 177, 177, 0.3) !important;
+}
+
+#contain {
+	margin: 0;
+	padding: 0;
+	background: url("backgrounds/1.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+.bg-overlay{
+	background: rgba(0,0,0, 0.3);
+	height: 100%;
+}
+
+#top-bar {
+	background-color: transparent !important;
+	/*border-color: rgba(216, 177, 177, 0.5) !important;*/
+	font-family: 'Abel', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 .nav{
 	z-index: 8 !important;
 }
-.navbar-inverse {
-    background-color: RGBA(34, 34, 34, 0.37);
-    border-color: RGBA(216, 177, 177, 0.16);
-}
 
 .navbar-brand{
-	border-right: 1px solid #AEAEAE;
-	border-left: 1px solid #AEAEAE;
 	font-weight: bold;
 	font-size: 1.5em;
+	color: #CEFF68 !important;
 }
 
 .navbar-brand:hover{
-	background-color:#AEAEAE !important;
+	border-radius: 25px;
+	background-color:#49C0F7 !important;
 	color: #000000 !important;
 }
 .navbar-nav a{
-	border-left: 1px solid #AEAEAE;
 	font-size: 1.5em;
+	color: #CEFF68 !important;
 }
 .navbar-nav a:hover{
-	background-color:#AEAEAE !important;
+	border-radius: 25px;
+	background-color:#49C0F7 !important;
 	color: #000000 !important;
 }
+
 .intro{
+	font-family: 'Open Sans Condensed', sans-serif !important;
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background: url("hd-fitness-wallpaper-5-background-wallpaper.jpg") no-repeat center center fixed;
 	background-size: cover;
-	height: 855px;
+	height: 100%;
 }
-.bg-overlay{
-	background: rgba(0,0,0, 0.3);
-	height: 855px;
-}
+
 .intro-message{
 	padding-top: 20%;
 	padding-bottom: 20%;
 }
 .intro-message > h1{
-	font-size: 5em;
+	font-size: 10em;
 	font-weight: bold;
-	color: #FD0100;
-	text-decoration: line-through;
+	font-family: 'Poiret One', cursive;
+	color: #CEFF68;
+	/*text-decoration: line-through;*/
 	letter-spacing: 2px;
-	text-shadow: 3px 3px 3px #FECC01;
+	/*text-shadow: 3px 3px 3px #FECC01;*/
 }
 .intro-message > h3{
 	font-size: 3em;
 	letter-spacing: 2px;
-	font-family: Tangerine;
 	color: #FDFDFD;
-	text-shadow: 2px 2px 2px #AEAEAE;
+	/*text-shadow: 2px 2px 2px #AEAEAE;*/
 	padding-bottom: 5%;
-	border-bottom: 3px solid #f8f8f8;
+	/*border-bottom: 3px solid #f8f8f8;*/
 }
 .intro-message > ul{
 	margin-top: 50px;
@@ -70,11 +98,10 @@ body{
 }
 @media(max-width: 767px){
 	.intro-message > h1{
-		font-size: 3em;
+		font-size: 4em;
 	}
 	.intro-message > h3{
 		font-size: 1.5em;
-		font-family: Tangerine;
 	}
 	.intro-message > ul{
 		margin-top: 40px;
@@ -84,15 +111,19 @@ body{
 		margin-bottom: 30px;
 	}
 }
+/*
 .btn {
 	display: inline-block;
 	letter-spacing: 2px;
 	color: #000000;
 	font-weight: bold;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 	transition: 0.3s;
+	background-color: rgba(34, 34, 34, 0.37);
+	border: 1px solid #FFFFFF;
 }
+
 .btn:hover {
 	background-color: #286090;
 	border: 5px solid #AEAEAE;
@@ -102,9 +133,29 @@ body{
 	font-weight: bold;
 	font-size: 2em;
 }
+*/
+.icon {
+	margin-right: 5px;
+}
 
+.butn {
+	border-radius: 20px;
+	margin: 50px;
+	border: 1px solid #FFFFFF;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: rgba(34, 34, 34, 0.4);
+	border-color: rgba(216, 177, 177, 0.8);
+	color: #AEAEAE !important;
+	font-family: 'Abel', sans-serif; 
+}
+.butn:hover {
+	text-decoration: none;
+	background-color:#49C0F7 !important;
+	color: #000000 !important;
+}
 .personal {
-	height: 855px;
+	height: 100%;
 	background: url("http://p1.pichost.me/i/45/1686464.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
@@ -113,7 +164,6 @@ body{
 }
 #about-content > h1 {
 	font-size: 4em;
-	font-family: Tangerine;
 	font-weight: bold;
 	color: #007FFF;
 	letter-spacing: 2px;
@@ -130,7 +180,7 @@ body{
 	position: fixed;
     width: 100%;
     height: 100%;
-    background: RGBA(0, 0, 0, 0.71);
+    background: rgba(0, 0, 0, 0.71);
     z-index: 20;
     visibility: hidden;
 }

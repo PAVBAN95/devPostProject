@@ -9,26 +9,29 @@
 	<link href="bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="dash.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 	<script src="jquery.min.js" rel="stylesheet"> </script>
 	<script src="bootstrap.min.js" rel="stylesheet"> </script>
 	<script type="text/javascript">
 		var i = 0;
 		function image_slider()
 		{
-			var arr = ["hd-fitness-wallpaper-5-background-wallpaper.jpg", "173982_FRUITS-HD-WALLPAPERS_2560x1600.jpg", 
-			"health-and-nutrition-28-cool-wallpaper.jpg"];
+			var arr = ["backgrounds/1.jpg", "backgrounds/2.jpg", "backgrounds/3.jpg", "backgrounds/4.jpg",
+			"backgrounds/5.jpg", "backgrounds/6.jpg"];
 			var len = arr.length;
-
-			var b = document.getElementById("intr");
-			b.style.backgroundImage = "url("+arr[i]+")";
+			document.getElementById("contain").style.backgroundImage = "url("+arr[i]+")";
 			i = (i+1) % len;
 			console.log(i);
-			setTimeout(image_slider, 2000);
+			setTimeout(image_slider, 3000);
 		}
 	</script>
 </head>
+<!-- <body onload="image_slider()"> -->
 <body onload="image_slider()">
-
+	<div id="contain" class="container-fluid">
+		<div class="bg-overlay">
 		<div id="dark">
 				
 		</div>
@@ -45,7 +48,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">code_master5</a>
+					<a class="navbar-brand" href="#">Diet Tracker</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
@@ -59,23 +62,24 @@
 			
 		<a name="home"></a>
 		<div id="intr" class="intro">
-			<div class="bg-overlay">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<div class="intro-message">
-								<h1>Diet Tracker</h1>
-								<h3>Let's track your diet!</h3>
-								<ul class="list-inline">
-									<li><a href="#" class="btn btn-info fa fa-fire">Login</a></li>
-									<li><a href="#" class="btn btn-info fa fa-github">Sign Up</a></li>
-								</ul>
-							</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="intro-message">
+							<h1>Diet Tracker</h1>
+							<h3>Let's track your diet!</h3>
+							<hr> </hr>
+							<ul class="list-inline">
+								<li><a href="#" class="butn" style="padding-left:19px; padding-right: 19px;"><img class="icon" src="icons/login2.png" />Login</a></li>
+								<li><a href="#" class="butn"><img class="icon" src="icons/signup2.png" />Sign Up</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	</div>
 </body>
 
 </html>
