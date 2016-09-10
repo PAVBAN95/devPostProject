@@ -1,14 +1,27 @@
-body{
-	font-family: Alegreya Sans;
+@font-face {
+   font-family: myFont;
+   src: url(myFont.ttf);
+   font-weight: bold;
 }
+@font-face {
+   font-family: 'Glyphicons Halflings';
+   src: url('/fonts/glyphi.ttf');
+}
+
+body{
+	font-family: myFont;
+}
+
 
 .nav{
 	z-index: 8 !important;
 }
 .navbar-inverse {
-    background-color: RGBA(34, 34, 34, 0.37);
+    background-color: RGBA(34, 34, 34, 0.07);
     border-color: RGBA(216, 177, 177, 0.16);
 }
+
+
 
 .navbar-brand{
 	border-right: 1px solid #AEAEAE;
@@ -19,7 +32,7 @@ body{
 
 .navbar-brand:hover{
 	background-color:#AEAEAE !important;
-	color: #000000 !important;
+	color: #aaa !important;
 }
 .navbar-nav a{
 	border-left: 1px solid #AEAEAE;
@@ -27,7 +40,7 @@ body{
 }
 .navbar-nav a:hover{
 	background-color:#AEAEAE !important;
-	color: #000000 !important;
+	color: #fff !important;
 }
 .intro{
 	text-align: center;
@@ -38,7 +51,7 @@ body{
 	height: 855px;
 }
 .bg-overlay{
-	background: rgba(0,0,0, 0.3);
+	background: rgba(0,0,0, 0.07);
 	height: 855px;
 }
 .intro-message{
@@ -46,19 +59,18 @@ body{
 	padding-bottom: 20%;
 }
 .intro-message > h1{
-	font-size: 5em;
+	font-size: 6em;
+	font-family: myFont;
 	font-weight: bold;
-	color: #FD0100;
-	text-decoration: line-through;
-	letter-spacing: 2px;
-	text-shadow: 3px 3px 3px #FECC01;
+	color: #fff;
+	letter-spacing: 6px;
+	
 }
 .intro-message > h3{
-	font-size: 3em;
+	font-size: 2em;
 	letter-spacing: 2px;
 	font-family: Tangerine;
 	color: #FDFDFD;
-	text-shadow: 2px 2px 2px #AEAEAE;
 	padding-bottom: 5%;
 	border-bottom: 3px solid #f8f8f8;
 }
@@ -89,7 +101,7 @@ body{
 	letter-spacing: 2px;
 	color: #000000;
 	font-weight: bold;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+	text-shadow: 1px 1px 1px rgba(2, 2, 2, 20);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 	transition: 0.3s;
 }
@@ -135,12 +147,37 @@ body{
     visibility: hidden;
 }
 
-#popmenu {
-	width: 80%;
-	height: 80%;
+.close{
+	position: relative;
+	float: right;
+	padding: 0;
+}
+#loginPop {
+	font-family: myFont;
+	width: 60%;
+	margin: 10% 20%;
+	height: 60%;
 	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 	z-index: 40;
 	position: fixed;
-	margin: 5% 0% 0px 10%;
-	visibility: hidden;
+	display: none;
+}
+
+#signUpPop {
+	font-family: myFont;
+	width: 60%;
+	margin: 10% 20%;
+	height: 60%;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	z-index: 40;
+	position: fixed;
+	display: none;
+}
+
+.Form{
+	margin: 10%;
+}
+
+.alignment{
+	float: right;
 }
