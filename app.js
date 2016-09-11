@@ -1,5 +1,6 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
+	session = require('express-session'),
 	mongoClient = require('mongodb').MongoClient,
 	bcrypt = require('bcrypt'),
 	handlebars = require('express-handlebars').create({
@@ -15,6 +16,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(session({secret: "ThisIsAFu**ingSecret"}));
 
 app.get("/", function(req, res){
 	res.sendFile(__dirname + '/views/index.html');
@@ -33,8 +35,8 @@ app.post('/signup', function(req, res){
 		}
 
 		var user = {
-			"email": req.body.username,
-			"pass": req.body.password
+			"email": req.body.email,
+			"pass": req.body.pass
 		};
 
 		bcrypt.genSalt(10, function(err, salt){

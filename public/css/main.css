@@ -1,6 +1,6 @@
 @font-face {
    font-family: myFont;
-   src: url('/fonts/myFont.ttf');
+   src: url(myFont.ttf);
    font-weight: bold;
 }
 @font-face {

@@ -1,96 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>devPost</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
-	<link href="bootstrap.min.css" rel="stylesheet">
+	<link href="main2.css" rel="stylesheet">
+	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
 	<link href="dash.css" rel="stylesheet">
 	<script src="jquery.min.js" rel="stylesheet"> </script>
 	<script src="bootstrap.min.js" rel="stylesheet"> </script>
 	<script type="text/javascript">
+		var i = 0;
 		function image_slider()
 		{
-			console.log("lo");
+			var arr = ["/images/image1.jpg", "/images/image2.jpg", 
+			"image3.jpg","/images/image4.jpg"];
+			var len = arr.length;
+
+			var b = document.getElementById("intr");
+			b.style.backgroundImage = "url("+arr[i]+")";
+			i = (i+1) % len;
+			console.log(i);
+			setTimeout(image_slider, 4000);
 		}
-	</script>>
+
+		function popUpSignUp(){
+			var Div = document.getElementById("signUpPop").style.display = "block";
+			document.getElementById("dark").style.visibility = "visible";
+		}
+
+		function popDownSignUp(){
+			var Div = document.getElementById("signUpPop").style.display = "none";
+			document.getElementById("dark").style.visibility = "hidden";
+		}
+
+		function popUpLogin(){
+			var Div = document.getElementById("loginPop").style.display = "block";
+			document.getElementById("dark").style.visibility = "visible";
+		}
+
+		function popDownLogin(){
+			var Div = document.getElementById("loginPop").style.display = "none";
+			document.getElementById("dark").style.visibility = "hidden";
+		}
+	</script>
 </head>
-<body onload="image_slider">
-	<nav class="navbar navbar-inverse packer">
-	 	<div class="container-fluid">
-	    	<div class="navbar-header">
-	      		<a class="navbar-brand" href="home.html">Diet Tracker</a>
-	    	</div>
-	    	<ul class="nav navbar-nav">
-	      		<li class="active"><a href="#">Home</a></li>
-	      		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-	        		<ul class="dropdown-menu">
-	         			<li><a href="#">Page 1-1</a></li>
-	          			<li><a href="#">Page 1-2</a></li>
-	          			<li><a href="#">Page 1-3</a></li>
-	        		</ul>
-	      		</li>
-	      		<li><a href="#">Page 2</a></li>
-	    	</ul>
-	    	<ul class="nav navbar-nav navbar-right">
-	      		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-	    	</ul>
-	 	</div>
-	</nav>
-  
-	<div class="container-fluid" style="border: 5px solid black;">
-		<div id="board" class="row">
-			<div class="col-xs-3" style="border: 5px solid red;">
-				
-			</div>
-			<div class="col-xs-6" style="border: 5px solid green;">
-				<div id="ate_form" class="row">
-					<div class="col-xs-12 well">
-						<h1>What you ate today?</h1>
-						<form>
+<body onload="image_slider()">
+
+		<div id="dark">
+		</div>
+
+		<nav id="top-bar" class="nav navbar-inverse navbar-fixed-top trans">
+			 <div class="container-fluid trans">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">dietTracker</a>
+				</div>
+				<div class="collapse navbar-collapse trans" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right ">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
 						 	
-						 	<div class="form-group">
-						    	<label for="item_category">Food Item Category</label>
-						    	<div class="dropdown">
-								    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-								    Food Item Category
-								    <span class="caret"></span></button>
-								    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-								      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fruits</a></li>
-								      <li role="presentation" class="divider"></li>
-								      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Vegetables</a></li>
-								      <li role="presentation" class="divider"></li>
-								      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Junk</a></li>
-								      <li role="presentation" class="divider"></li>
-								      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pulses</a></li>
-								    </ul>
-								</div>
-						  	</div>
-						  	
-						  	<div class="form-group">
-						    	<label for="item">Item Name</label>
-						    	<input type="text" class="form-control" id="item">
-						  	</div>
-						  	
-						  	<button type="submit" class="btn btn-default">Submit</button>
-						</form>
-					</div>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
 				</div>
-				<div id="ate_list" class="row">
-					<div class="col-xs-12 well">
-					
-					</div>
-				</div>
+		</nav>
+
+		<div id="main_content">
+
+		<div id="left_div">	
+
+		<div id="l1">
+		</div>
+		<div id="l2">
+		</div>
+		<div id="l3">
+		</div>
+
+		</div>
+
+		<div id="middle_div">	
+			<div id="main_input">
 			</div>
-			<div class="col-xs-3" style="border: 5px solid blue;">
-				<div id="calendar" class="row well">
-					<div class="col-xs-12">
-					
-					</div>
-				</div>
+
+			<div id="list">
 			</div>
 		</div>
-	</div>
+
+		<div id="right_div">	
+			<div id="l1">
+			</div>
+			<div id="l2">
+			</div>
+			<div id="l3">
+			</div>
+		</div>
+
+		</div>
+
 </body>
+
 </html>
