@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>devPost</title>
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<title></title>
+	<title>Diet Tracker</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
-	<link href="/css/main2.css" rel="stylesheet">
-	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
-	<link href="/css/dash.css" rel="stylesheet">
-	<script src="/js/jquery.min.js" rel="stylesheet"> </script>
-	<script src="/js/bootstrap.min.js" rel="stylesheet"> </script>
+	
+	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="../public/css/main.css" type="text/css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+	<script src="../public/js/jquery.min.js" rel="stylesheet"> </script>
+	<script src="../public/js/bootstrap.min.js" rel="stylesheet"> </script>
+
 	<script type="text/javascript">
 		var i = 0;
 		function image_slider()
 		{
-			var arr = ["/images/image1.jpg", "/images/image2.jpg", 
-			"image3.jpg","/images/image4.jpg"];
+			var arr = ["../public/images/1.jpg", "../public/images/2.jpg", 
+			"3.jpg","../public/images/4.jpg", "../public/images/5.jpg", "../public/images/6.jpg"];
 			var len = arr.length;
 
-			var b = document.getElementById("intr");
+			var b = document.getElementById("contain");
 			b.style.backgroundImage = "url("+arr[i]+")";
 			i = (i+1) % len;
 			console.log(i);
@@ -48,96 +54,104 @@
 	</script>
 </head>
 <body onload="image_slider()">
+	<div id="contain" class="container-fluid">
 
-		<div id="dark">
-				
-		</div>
+		<div class="bg-overlay">
 
-		<div id="loginPop">
-		
-		<div class="close">
+			<div id="dark">
+					
+			</div>
 
-		<button onclick="popDownLogin()" type="button" class="btn btn-default btn-sm alignment" >
-          <span class="glyphicon glyphicon-remove"></span>close
-        </button>
-        </div>
-
-        <div class="Form">
-   		<form action = "/signin" method = "POST">
-		  Email<br>
-		  <input type="text" name="email" placeholder="Email" >
-		  <br><br>
-		  Password<br>
-		  <input type="password" name="pass" placeholder="Password">
-		  <br><br>
-		  <input type="submit" value="Login">
-		 </form>
-		 </div> 
-
-		</div>
-
-		<div id="signUpPop">
-		
-		<div class="close">
-
-		<button onclick="popDownSignUp()" type="button" class="btn btn-default btn-sm alignment" >
-          <span class="glyphicon glyphicon-remove"></span>close
-        </button>
-        </div>
-
-        <div class="Form">
-		  Email<br>
-		  <form action = "signup" method = "POST">
-		  <input type="text" name="email" placeholder="Email" >
-		  <br><br>
-		  Password<br>
-		  <input type="password" name="pass" placeholder="Password">
-		  <br><br>
-		  <input type="submit" value="Sign Up">
-		  </form>
-		 </div> 
-
-		</div>
-
-		<nav id="top-bar" class="nav navbar-inverse navbar-fixed-top trans">
-			 <div class="container-fluid trans">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">dietTracker</a>
-				</div>
-				<div class="collapse navbar-collapse trans" id="myNavbar">
-					<ul class="nav navbar-nav navbar-right ">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About</a></li>
-						 	
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</div>
-		</nav>
+			<div id="loginPop">
 			
-		<a name="home"></a>
-		<div id="intr" class="intro">
-			<div class="bg-overlay">
+				<div class="close">
+
+					<button onclick="popDownLogin()" type="button" class="btn btn-default btn-sm alignment" >
+			        	<span><img src="../public/icons/cross.png" class="alignment"></span>
+			        </button>
+			    </div>
+
+		        <div class="Form">
+			   		<form action = "/signin" method = "POST">
+						Email<br>
+						<input type="text" name="email" placeholder="Email" >
+						<br><br>
+						Password<br>
+						<input type="password" name="pass" placeholder="Password">
+						<br><br>
+						<input type="submit" value="Login">
+					</form>
+				</div> 
+
+			</div>
+
+			<div id="signUpPop">
+			
+				<div class="close">
+
+					<button onclick="popDownSignUp()" type="button" class="btn btn-default btn-sm alignment" >
+			        	<span><img src="../public/icons/cross.png" class="alignment"></span>
+			        </button>
+		        </div>
+
+		        <div class="Form">
+					Email<br>
+					<form action = "signup" method = "POST">
+				 		<input type="text" name="email" placeholder="Email" >
+				 		<br><br>
+				  		Password<br>
+				  		<input type="password" name="pass" placeholder="Password">
+				  		<br><br>
+				  		<input type="submit" value="Sign Up">
+				  	</form>
+			 	</div> 
+
+			</div>
+
+			<nav id="top-bar" class="nav navbar-inverse navbar-fixed-top">
+				 <div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Diet Tracker</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+				
+			<a name="home"></a>
+
+			<div id="intr" class="intro">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="intro-message">
 								<h1>Diet Tracker</h1>
 								<h3>Let's track your diet!</h3>
+								<hr/>
 								<ul class="list-inline">
-									<li><button onclick="popUpLogin()" class="btn btn-info "></span>Login</button></li>
-									<li><button onclick="popUpSignUp()" class="btn btn-info fa fa-github">Sign Up</button></li>
+									<li><a href="#" onclick="popUpLogin()" class="butn" style="padding-left:19px; padding-right: 19px;"><img class="icon" src="../public/icons/login2.png" />Login</a></li>
+									<li><a href="#" onclick="popUpSignUp()" class="butn"><img class="icon" src="../public/icons/signup2.png" />Sign Up</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
+
+	</div>
+
 </body>
 
 </html>
