@@ -25,10 +25,12 @@
   },
   "homepage": "https://github.com/saurabh0402/devPostProject#readme",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
-    "express-session": "^1.14.1"
+    "express-session": "^1.14.1",
+    "mongodb": "^2.2.9"
   }
 }
