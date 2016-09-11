@@ -85,46 +85,38 @@ app.post("/signin", function(req, res){
 			"pass": req.body.pass
 		};
 
-		bcrypt.genSalt(10, function(err, salt){
-			bcrypt.hash(user.pass, salt, function(err, hashedPass){
-				user.pass = hashedPass;
+		db.collection('users').find({"email": user.email}).count(function(err, c){
+			if(c == 0){
+				db.close();
+				res.json({"success": 0, "error": "Wrong username or password"});
+				return;
+			}
 
-				db.collection('users').find({"email": user.email}).count(function(err, c){
-					if(c == 0){
-						db.close();
-						res.json({"success": 0, "error": "Wrong username or password"});
-						return;
-					}
+			var cursor = db.collection('users').find({"email": user.email});
+			cursor.each(function(err, d){
+				if(err){
+					res.json({"success": 0, "error": "Internal error"});
+					return;
+				}
 
-					var cursor = db.collection('users').find({"email": user.email});
-
-					cursor.each(function(err, d){
-						if(err){
-							res.json({"success": 0, "error": "Internal error"});
+				if(d != null){
+					bcrypt.compare(user.pass, d.pass, function(err, ans){
+						if(ans){
+							db.close();
+							res.json({"success": 1, "error": 0});
 							return;
 						}
 
-						if(d != null){
-							bcrypt.compare(user.pass, d.pass, function(err, ans){
-								if(ans){
-									db.close();
-									res.json({"success": 1, "error": 0});
-									return;
-								}
-
-								else {
-									db.close();
-									res.json({"success": 0, "error": "Wrong username or password"});
-									return;
-								}
-							});
+						else {
+							db.close();
+							res.json({"success": 0, "error": "Wrong username or password"});
+							return;
 						}
 					});
-				})
+				}
 			});
 		})
 	});
-
 });
 
 app.listen(app.get('port'), function(){
