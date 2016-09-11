@@ -2,15 +2,15 @@
 <html>
 <head>
 	<title>devPost</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
-	<link href="main2.css" rel="stylesheet">
+	<link href="/css/main2.css" rel="stylesheet">
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
-	<link href="dash.css" rel="stylesheet">
-	<script src="jquery.min.js" rel="stylesheet"> </script>
-	<script src="bootstrap.min.js" rel="stylesheet"> </script>
+	<link href="/css/dash.css" rel="stylesheet">
+	<script src="/js/jquery.min.js" rel="stylesheet"> </script>
+	<script src="/js/bootstrap.min.js" rel="stylesheet"> </script>
 	<script type="text/javascript">
 		var i = 0;
 		function image_slider()
@@ -85,14 +85,15 @@
         </div>
 
         <div class="Form">
+        <form action = "/signup" method = "POST">
 		  Email<br>
-		  <input type="text" name="firstname" placeholder="Email" >
+		  <input type="text" name="username" placeholder="Email" >
 		  <br><br>
 		  Password<br>
-		  <input type="password" name="lastname" placeholder="Password">
+		  <input type="password" name="password" placeholder="Password">
 		  <br><br>
 		  <input type="submit" value="Sign Up">
-
+		 </form>
 		 </div> 
 
 		</div>
