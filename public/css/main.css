@@ -47,6 +47,7 @@ hr {
 .navbar-nav a{
 	font-size: 1.5em;
 	color: #CEFF68;
+	border-bottom: 2px solid #000;
 }
 .navbar-nav a:hover{
 	/*border-radius: 25px;*/
@@ -191,4 +192,23 @@ hr {
 
 .alignment{
 	float: right;
+}
+
+.About{
+	height: 1000px;
+	background: rgba(102,255,224,0.6);
+	margin-top:0px;
+	font-family:  'Poiret One', cursive;
+	padding:50px 10px;
+	color: #33f;
+}
+
+.Contact{
+	height: 1000px;
+	background: rgba(153,153,255,0.6);
+	margin-top:0px;
+	font-family:  'Poiret One', cursive;
+	padding:50px 10px;
+	color: #123;
+
 }
