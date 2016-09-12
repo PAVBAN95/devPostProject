@@ -114,11 +114,12 @@ hr {
 .butn {
 	/*border-radius: 20px;*/
 	/*margin: 50px;*/
-	width: 70px;
-	border: 1px solid #FFFFFF;
+	width: 90px ; 
+	padding: 5px 10px;
+	border: 1.5px solid #FFFFFF;
 	font-size: 20px;
 	font-weight: bold;
-	background-color: rgba(34, 34, 34, 0.4);
+	background-color: rgba(34, 34, 34, 0.6);
 	border-color: rgba(216, 177, 177, 0.8);
 	color: #AEAEAE !important;
 	font-family: 'Abel', sans-serif;

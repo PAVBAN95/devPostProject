@@ -2,15 +2,16 @@
 <html>
 <head>
 	<title>devPost</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="../public/css/main.css">
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
-	<link href="main2.css" rel="stylesheet">
+	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
-	<link href="dash.css" rel="stylesheet">
-	<script src="jquery.min.js" rel="stylesheet"> </script>
-	<script src="bootstrap.min.js" rel="stylesheet"> </script>
+	<link href="../public/css/dash.css" rel="stylesheet">
+	<script src="../public/js/jquery.min.js" rel="stylesheet"> </script>
+	<script src="../public/js/bootstrap.min.js" rel="stylesheet"> </script>
+
 	<script type="text/javascript">
 		var i = 0;
 		function image_slider()
@@ -76,17 +77,35 @@
 
 		<div id="left_div">	
 
-		<div id="l1">
+		<div class="l1" id="i1">
+			<span class="title_l">Mango</span>
+			<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
 		</div>
-		<div id="l2">
+		<div class="l1">
+			<span class="title_l">Mango</span>
+			<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
 		</div>
-		<div id="l3">
+		<div class="l1">
+			<span class="title_l">Mango</span>
+			<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
 		</div>
 
 		</div>
 
 		<div id="middle_div">	
 			<div id="main_input">
+				<span id="ques">What you ate today?</span>
+
+				 <select id="s1">
+				  <option value="category">Category?</option>
+				  <option value="fruits">Fruits</option>
+				  <option value="vegetables">Vegetables</option>
+				  <option value="junks">Junk foods</option>
+				</select> 
+
+				<input type="text" id="item" name="item">
+				<button type="submit" id="submit" name="submit">Submit</button>
+
 			</div>
 
 			<div id="list">
@@ -94,11 +113,20 @@
 		</div>
 
 		<div id="right_div">	
-			<div id="l1">
+			<div id="calendar">
 			</div>
-			<div id="l2">
+
+			<div class="r1">
+				<span class="tip_r">TIP #1</span>
+				<span class="content_r">An apple a day keeps doctor away.</span>
 			</div>
-			<div id="l3">
+			<div class="r1">
+				<span class="tip_r">TIP #1</span>
+				<span class="content_r">An apple a day keeps doctor away.</span>
+			</div>
+			<div class="r1">
+				<span class="tip_r">TIP #1</span>
+				<span class="content_r">An apple a day keeps doctor away.</span>
 			</div>
 		</div>
 

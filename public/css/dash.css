@@ -21,7 +21,7 @@ body{
 	padding: 10px;
 	height: 600px;
     background: orange;
-    width: 15%;
+    width: 20%;
     float: left;
 }
 
@@ -30,7 +30,7 @@ body{
     float: left;
 	height: 600px;
     background: green;
-    width: 70%;	
+    width: 60%;	
 }
 
 #right_div{
@@ -38,38 +38,33 @@ body{
 	float: left;	
 	height: 600px;
     background: blue;
-    width: 15%;
+    width: 20%;
 }
 
-#l1{
+.l1{
+	overflow: hidden;
 	display: inline-block;
-	background: #eee;	
-	margin-top: 20px;
-	width: 100%;
-	height: 70px;
-	margin: 0 auto;
+    background: #eee;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
-#l2{
+.r1{
+	overflow: hidden;
 	display: inline-block;
-	background: #eee;
-	margin-top: 20px;
-	height: 70px;
-	width: 100%;
-	margin: 0 auto;
-}
-
-#l3{
-	display: inline-block;
-	background: #eee;
-	margin-top: 20px;
-	height: 70px;
-	width: 100%;
-	margin: 0 auto;
+    background: #eee;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
 #main_input{
-	height: 350px;
+	height: 280px;
 	width: 100%;
 	background: #fff;
 }
@@ -79,4 +74,79 @@ body{
 	height: 150px;
 	width: 100%;
 	background: #fff;
+}
+
+#ques{
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#s1{
+	display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+#item{
+	margin: 20px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+#submit{
+	display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 40%;
+}
+
+.title_l{
+	display: block;
+    margin-left: 42px;
+    font-size: 13px;
+}
+
+.content_l{
+	display: inline-block;
+	font-size: 10px;
+    margin-left: 42px;
+}
+
+.tip_r{
+	display: block;
+    margin-left: 42px;
+    font-size: 13px;
+}
+
+.content_r{
+	display: inline-block;
+	font-size: 10px;
+    margin-left: 42px;	
+}
+
+#calendar{
+	height: 140px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+#i1{
+	background-image: url("../images/temp_opt.jpg");
+    background-position: top left;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
 }
