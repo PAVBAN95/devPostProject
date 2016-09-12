@@ -1,10 +1,20 @@
 body{
 	margin: 0;
 	padding: 0;
+    height: 100%;
 }
 
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
 #board {
 	height: 600px;
+}
+
+#myNavbar {
+    margin-left: 20px;
 }
 
 .packer {
@@ -20,11 +30,12 @@ body{
 #wrapper {
     float: left;
     width: 75%;
+    height: 100%;
 }
 
 #left_div{
 	padding: 10px;
-    height: 600px;
+    height: 623px;
     background: orange;
     width: 30%;
     float: left;
@@ -33,7 +44,7 @@ body{
 #middle_div{
 	padding: 20px;
     float: right;
-    height: 600px;
+    height: 623px;
     background: green;
     width: 70%;	
 }
@@ -41,7 +52,7 @@ body{
 #right_div{
 	padding: 10px;
     float: right;
-    height: 600px;
+    height: 623px;
     background: blue;
     width: 25%;
 }
@@ -77,18 +88,16 @@ body{
 
     #middle_div{
         width:100%;
-        display: block;
+        height: auto;
     }
 
     #left_div {
         width:100%;
-        display: block;
         height: auto;
     }
 
     #right_div{
         width:100%;
-        display: block;
         height: auto;
     }
 }
@@ -101,7 +110,8 @@ body{
 
 #list{
 	margin-top: 25px;
-	height: 150px;
+	height: auto;
+    padding: 5px;
 	width: 100%;
 	background: #fff;
 }

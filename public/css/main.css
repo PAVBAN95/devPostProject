@@ -31,12 +31,14 @@ hr {
 
 .nav{
 	z-index: 8 !important;
+	margin-right: 10px;
 }
 
 .navbar-brand{
 	font-weight: bold;
 	font-size: 1.5em;
 	color: #FFF;
+	margin-left: 15px;
 }
 
 .navbar-brand:hover{
