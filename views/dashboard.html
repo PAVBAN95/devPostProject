@@ -7,7 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap -->
 	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../public/css/main.css" rel="stylesheet">
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	
 	<link href="../public/css/dash.css" rel="stylesheet">
 	<script src="../public/js/jquery.min.js" rel="stylesheet"> </script>
 	<script src="../public/js/bootstrap.min.js" rel="stylesheet"> </script>
@@ -49,68 +54,86 @@
 	</script>
 </head>
 <body onload="image_slider()">
-
+	<div class="container-fluid">
 		<div id="dark">
 		</div>
 
-		<nav id="top-bar" class="nav navbar-inverse navbar-fixed-top trans">
-			 <div class="container-fluid trans">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">dietTracker</a>
-				</div>
-				<div class="collapse navbar-collapse trans" id="myNavbar">
-					<ul class="nav navbar-nav navbar-right ">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About</a></li>
-						 	
-						<li><a href="#contact">Contact</a></li>
-					</ul>
+		<nav id="top-bar" class="nav navbar-inverse navbar-fixed-top">
+				 <div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Diet Tracker</a>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
 				</div>
 		</nav>
 
 		<div id="main_content">
 
-		<div id="left_div">	
+		<div id="wrapper">
+			<div id="middle_div">	
+				<div id="main_input">
+					<span id="ques">What you ate today?</span>
 
-		<div class="l1" id="i1">
-			<span class="title_l">Mango</span>
-			<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
-		</div>
-		<div class="l1">
-			<span class="title_l">Mango</span>
-			<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
-		</div>
-		<div class="l1">
-			<span class="title_l">Mango</span>
-			<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
-		</div>
+					 <select id="s1">
+					  <option value="category">Category?</option>
+					  <option value="fruits">Fruits</option>
+					  <option value="vegetables">Vegetables</option>
+					  <option value="junks">Junk foods</option>
+					</select> 
 
-		</div>
+					<input type="text" id="item" name="item">
+					<button type="submit" id="submit" name="submit">Submit</button>
 
-		<div id="middle_div">	
-			<div id="main_input">
-				<span id="ques">What you ate today?</span>
+				</div>
 
-				 <select id="s1">
-				  <option value="category">Category?</option>
-				  <option value="fruits">Fruits</option>
-				  <option value="vegetables">Vegetables</option>
-				  <option value="junks">Junk foods</option>
-				</select> 
+				<div id="list">
+					<span id="title_list">Today's Meal...</span>
+					<div class="list_item">
+						<span class="food_item">Chowmin</span>
+						<span class="food_categ">(Junk Food)</span>
+						<span class="timespan">16:00</span>
+					</div>
+					<div class="list_item">
+						<span class="food_item">Chowmin</span>
+						<span class="food_categ">(Junk Food)</span>
+						<span class="timespan">16:00</span>
+					</div>
+					<div class="list_item">
+						<span class="food_item">Chowmin</span>
+						<span class="food_categ">(Junk Food)</span>
+						<span class="timespan">16:00</span>
+					</div>
+				</div>
+			</div>
+			<div id="left_div">	
 
-				<input type="text" id="item" name="item">
-				<button type="submit" id="submit" name="submit">Submit</button>
+				<div class="l1" id="i1">
+					<span class="title_l">Mango</span>
+					<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
+				</div>
+				<div class="l1">
+					<span class="title_l">Mango</span>
+					<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
+				</div>
+				<div class="l1">
+					<span class="title_l">Mango</span>
+					<span class="content_l">The king of all fruits, yellow in appearance and very sweet in taste full of energy.</span>
+				</div>
 
 			</div>
-
-			<div id="list">
-			</div>
 		</div>
+
 
 		<div id="right_div">	
 			<div id="calendar">
@@ -131,7 +154,7 @@
 		</div>
 
 		</div>
-
+	</div>
 </body>
 
 </html>
