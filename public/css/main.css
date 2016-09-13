@@ -1,3 +1,22 @@
+/*@font-face
+{
+	font-family: 'Abel';
+    src: url('fonts/AbelRegular.ttf');
+}
+
+@font-face
+{
+	font-family: 'Open Sans Condensed';
+    src: url('fonts/OpenSansCond.ttf');
+}
+
+@font-face
+{
+	font-family: 'Poiret One';
+    src: url('fonts/PoiretOneRegular.ttf');
+}
+*/
+
 a {
 	text-decoration: none;
 }
