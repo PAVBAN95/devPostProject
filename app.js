@@ -187,6 +187,30 @@ app.post('/addfood', function(req, res){
 	});
 });
 
+/*-------------------------------------
+-------------- TIPS -------------------
+-------------------------------------*/
+
+app.post('/gettips', function(req, res){
+	mongoClient.connect('mongodb://127.0.0.1:27017/devPost', function(err, db){
+		if(err){
+			res.json({"error": 1});
+			return;
+		}
+
+		db.collection.find({}).toArray(function(err, arr){
+			if(err){
+				db.close();
+				res.json({"error": 1});
+				return;
+			}
+
+			db.close();
+			res.json({"error": 0, "tip": arr[Math.random()*arr.length]});
+		});
+	});
+});
+
 app.listen(app.get('port'), function(){
 	console.log("Server running on port " + app.get('port'));
-})
+});
