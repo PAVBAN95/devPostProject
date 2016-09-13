@@ -19,6 +19,22 @@
 
 	<script type="text/javascript">
 		var i = 0;
+
+			$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 850);
+          return false;
+        }
+      }
+    });
+  });
+
 		function image_slider()
 		{
 			var arr = ["/images/image1.jpg", "/images/image2.jpg", 
@@ -70,14 +86,14 @@
 					</div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="#top">Home</a></li>
+							<li><a href="#About">About</a></li>
+							<li><a href="#Contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 		</nav>
-
+		<div id="top"></div>
 		<div id="main_content">
 
 		<div id="wrapper">
@@ -154,6 +170,60 @@
 		</div>
 
 		</div>
+	</div>
+
+
+	<div id="About" class="about">
+		<h1><b>About Us</b></h1>
+	</div>
+
+	<div id="Contact" class="contact">
+		<h1><b>Contact Us</b></h1>
+
+<table>
+  <tr>
+    <td>Saurabh Kumar</td>
+    <td>
+<img src="../public/images/mobile.png" width="30px" height="30px">
+    +91-9882925402</td>
+    <td>
+<img src="../public/images/email2.png" width="20px" height="20px">
+
+    saurabhisalways4u@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Pavan Bansal</td>
+    <td>
+<img src="../public/images/mobile.png" width="30px" height="30px">
+    +91-9882550794</td>
+    <td>
+<img src="../public/images/email2.png" width="20px" height="20px">
+
+    bansal.pavan92@gmail.com</td>
+  </tr>
+  <tr>
+    <td>
+     Sukhbir Singh</td>
+    <td>
+    <img src="../public/images/mobile.png" width="30px" height="30px">
+    +91-9882546092</td>
+    <td>
+<img src="../public/images/email2.png" width="20px" height="20px">
+
+    sukhbir947@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Bimalkant Lauhny</td>
+    <td>
+    <img src="../public/images/mobile.png" width="30px" height="30px">
+    +91-9882548765</td>
+    <td>
+<img src="../public/images/email2.png" width="20px" height="20px">
+
+    xyz@gmail.com</td>
+  </tr>
+  
+</table>
 	</div>
 </body>
 
