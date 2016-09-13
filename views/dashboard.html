@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>devPost</title>
+	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="../public/css/main.css">
-	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Bootstrap -->
+
 	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../public/css/main.css" rel="stylesheet">
+	
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"> -->
 	
 	<link href="../public/css/dash.css" rel="stylesheet">
+	
+	<style type="text/css">
+		@font-face
+		{
+			font-family: 'Abel';
+    		src: url('fonts/AbelRegular.ttf');
+		}
+
+		@font-face
+		{
+			font-family: 'Open Sans Condensed';
+    		src: url(fonts/OpenSansCond.ttf);
+		}
+
+		@font-face
+		{
+			font-family: 'Poiret One';
+    		src: url('fonts/PoiretOneRegular.ttf');
+		}
+		
+	</style>
+	
 	<script src="../public/js/jquery.min.js" rel="stylesheet"> </script>
 	<script src="../public/js/bootstrap.min.js" rel="stylesheet"> </script>
 
 	<script type="text/javascript">
 		var i = 0;
-		function image_slider()
-		{
-			var arr = ["/images/image1.jpg", "/images/image2.jpg", 
-			"image3.jpg","/images/image4.jpg"];
-			var len = arr.length;
 
-			var b = document.getElementById("intr");
-			b.style.backgroundImage = "url("+arr[i]+")";
-			i = (i+1) % len;
-			console.log(i);
-			setTimeout(image_slider, 4000);
-		}
+		$(function() {
+		    $('a[href*="#"]:not([href="#"])').click(function() {
+		    	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		        	var target = $(this.hash);
+		        	target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		        	if (target.length) {
+		          	$('html, body').animate({
+		            	scrollTop: target.offset().top
+		          	}, 850);
+		          	return false;
+		        	}
+		      	}
+			});
+		});
 
-		function popUpSignUp(){
-			var Div = document.getElementById("signUpPop").style.display = "block";
-			document.getElementById("dark").style.visibility = "visible";
-		}
-
-		function popDownSignUp(){
-			var Div = document.getElementById("signUpPop").style.display = "none";
-			document.getElementById("dark").style.visibility = "hidden";
-		}
-
-		function popUpLogin(){
-			var Div = document.getElementById("loginPop").style.display = "block";
-			document.getElementById("dark").style.visibility = "visible";
-		}
-
-		function popDownLogin(){
-			var Div = document.getElementById("loginPop").style.display = "none";
-			document.getElementById("dark").style.visibility = "hidden";
-		}
 	</script>
 </head>
 <body onload="image_slider()">
@@ -70,14 +76,14 @@
 					</div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="#top">Home</a></li>
+							<li><a href="#About">About</a></li>
+							<li><a href="#Contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 		</nav>
-
+		<div id="top"></div>
 		<div id="main_content">
 
 		<div id="wrapper">
@@ -154,6 +160,60 @@
 		</div>
 
 		</div>
+	</div>
+
+
+	<div id="About" class="about">
+		<h1><b>About Us</b></h1>
+	</div>
+
+	<div id="Contact" class="contact">
+		<h1><b>Contact Us</b></h1>
+
+<table>
+  <tr>
+    <td>Saurabh Kumar</td>
+    <td>
+<img src="../public/icons/mobile.png" width="30px" height="30px">
+    +91-9882925402</td>
+    <td>
+<img src="../public/icons/email2.png" width="20px" height="20px">
+
+    saurabhisalways4u@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Pavan Bansal</td>
+    <td>
+<img src="../public/icons/mobile.png" width="30px" height="30px">
+    +91-9882550794</td>
+    <td>
+<img src="../public/icons/email2.png" width="20px" height="20px">
+
+    bansal.pavan92@gmail.com</td>
+  </tr>
+  <tr>
+    <td>
+     Sukhbir Singh</td>
+    <td>
+    <img src="../public/icons/mobile.png" width="30px" height="30px">
+    +91-9882546092</td>
+    <td>
+<img src="../public/icons/email2.png" width="20px" height="20px">
+
+    sukhbir947@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Bimalkant Lauhny</td>
+    <td>
+    <img src="../public/icons/mobile.png" width="30px" height="30px">
+    +91-9882548765</td>
+    <td>
+<img src="../public/icons/email2.png" width="20px" height="20px">
+
+    lauhny.bimalk@gmail.com</td>
+  </tr>
+  
+</table>
 	</div>
 </body>
 

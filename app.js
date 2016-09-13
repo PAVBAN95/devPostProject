@@ -36,7 +36,9 @@ app.post('/signup', function(req, res){
 
 		var user = {
 			"email": req.body.email,
-			"pass": req.body.pass
+			"pass": req.body.pass,
+			"food": [],
+			"total": {}
 		};
 
 		bcrypt.genSalt(10, function(err, salt){
@@ -60,7 +62,6 @@ app.post('/signup', function(req, res){
 						req.session.email = user.email;
 						res.json({"success": 1, "error": false})
 					});
-
 				});
 			});
 		});
@@ -116,6 +117,73 @@ app.post("/signin", function(req, res){
 				}
 			});
 		})
+	});
+});
+
+/*--------------------------------------
+-------------- ADD FOOD ----------------
+--------------------------------------*/
+
+app.post('/addfood', function(req, res){
+	var food = {
+		"id": req.body.foodid,
+		"name": req.body.foodname,
+		"date": req.body.date
+	}
+
+	mongoClient.connect('mongodb://127.0.0.1:27017/devPost', function(err, db){
+		if(err){
+			res.json({"success": 0, "error": "Internal error"});
+			return;
+		}
+
+		db.collection('users').find({'email': req.body.email}).count(function(err, c){
+			if(err){
+				res.json({"success": 0, "error": "Internal error"});
+				return;
+			}
+
+			if(c == 0){
+				res.json({"success": 0, "error": "Please sign in to do this!"});
+				return;
+			}
+
+			db.collection('users').update({'email': req.body.email}, {$push: {'food': food}}, function(err, result){
+				if(err){
+					db.close();
+					res.json({"success": 0, "error": "Internal error"});
+					return;
+				}
+
+				var c2 = db.collection('users').find({'email': req.body.email}), tot, fdetails;
+
+				c2.each(function(err, d){
+					if(d != null){
+						tot = d.total;
+						var c1 = db.collection('food').find({'foodid': food.foodid});
+
+						c1.each(function(err, d){
+							if(d != null){
+								fdetails = d.nutrients;
+								for(var x in fdetails){
+									if(tot.hasOwnProperty(x)){
+										tot[x] = tot[x] + fdetails[x];
+									}
+									else{
+										tot[x] = fdetails[x];
+									}
+								}
+
+								db.collection('users').update({'email': req.body.email}, {$set: {total: tot}}, function(err, result2){
+									db.close();
+									res.json({"success": 1, "error": 0});
+								});	
+							}
+						});
+					}
+				});
+			});
+		});
 	});
 });
 
