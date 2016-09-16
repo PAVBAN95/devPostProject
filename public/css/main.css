@@ -36,7 +36,7 @@ hr {
 }
 
 .bg-overlay{
-	background: rgba(0,0,0, 0.3);
+	background: rgba(0,0,0, 0.6);
 	height: 100%;
 }
 
@@ -114,6 +114,10 @@ hr {
 	padding: 10px;
 }
 @media(max-width: 627px){
+
+	#top-bar {
+		background-color: rgba(0, 0, 0, 1) !important;
+	}
 	.intro-message > h1{
 		font-size: 4em;
 	}
@@ -228,22 +232,20 @@ hr {
 	background: rgba(102,255,224,0.6);
 	margin-top:0px;
 	font-family:  'Poiret One', cursive;
-	padding:50px 10px;
+	padding:50px 40px;
 	color: #33f;
 	font-size: 25px;
 }
 
 .contact{
-	height: 850px;
+	
 	background: rgba(153,153,255,0.6);
-	margin-top:0px;
+	margin-top:-1px;
 	font-family:  'Poiret One', cursive;
-	padding:50px 10px;
+	padding:50px 10px 100px 10px;
 	color: #123;
 	font-size: 25px;
-	
 	letter-spacing: 1px;
-	overflow: scroll;
 
 }
 
@@ -298,4 +300,9 @@ th, td {
 	top: 30px;
 	left: 50px;
 	font-size: 1.2em;
+}
+
+.Table{
+	width: 100% !important;
+	margin: 0px 10%;
 }
