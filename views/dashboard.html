@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Dashboard</title>
-	<link rel="stylesheet" type="text/css" href="../public/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -76,10 +76,7 @@
 					</div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#top">Home</a></li>
-							<li><a href="#About">About</a></li>
-							<li><a href="#Contact">Contact</a></li>
-							<li><a href="/logout">Log Out</a></li>
+							<li><a href="/logout">Logout</a></li>
 						</ul>
 					</div>
 				</div>
@@ -93,10 +90,12 @@
 					<span id="ques">What you ate today?</span>
 
 					 <select id="s1">
-					  <option value="category">Category?</option>
+					  <option value="category">Select a food category?</option>
 					  <option value="fruits">Fruits</option>
 					  <option value="vegetables">Vegetables</option>
+					  <option value="non_veg">Non-veg</option>
 					  <option value="junks">Junk foods</option>
+					  <option value="others">Others</option>
 					</select> 
 
 					<input type="text" id="item" name="item">
@@ -105,12 +104,17 @@
 				</div>
 
 				<div id="list">
-					<span id="title_list">Today's Meal...</span>
+					<span id="title_list">Past's Meal...</span>
 					<div class="list_item">
 						<span class="food_item">Chowmin</span>
 						<span class="food_categ">(Junk Food)</span>
 						<span class="timespan">16:00</span>
 					</div>
+					<div class="list_item">
+						<span class="food_item">Chowmin</span>
+						<span class="food_categ">(Junk Food)</span>
+						<span class="timespan">16:00</span>
+					</div>	
 					<div class="list_item">
 						<span class="food_item">Chowmin</span>
 						<span class="food_categ">(Junk Food)</span>
@@ -141,7 +145,6 @@
 			</div>
 		</div>
 
-
 		<div id="right_div">	
 			<div id="calendar">
 			</div>
@@ -151,70 +154,23 @@
 				<span class="content_r">An apple a day keeps doctor away.</span>
 			</div>
 			<div class="r1">
-				<span class="tip_r">TIP #1</span>
-				<span class="content_r">An apple a day keeps doctor away.</span>
+				<span class="tip_r">TIP #2</span>
+				<span class="content_r">Eat a big, Balanced Breakfast</span>
 			</div>
 			<div class="r1">
-				<span class="tip_r">TIP #1</span>
-				<span class="content_r">An apple a day keeps doctor away.</span>
+				<span class="tip_r">TIP #3</span>
+				<span class="content_r">Let food be thy medicine and medicine be thy food.</span>
+			</div>
+
+			<div class="r1">
+				<span class="tip_r">TIP #4</span>
+				<span class="content_r">Pasta doesn't make you fat. How much pasta you eat makes you fat.</span>
 			</div>
 		</div>
 
 		</div>
 	</div>
 
-
-	<div id="About" class="about">
-		<h1><b>About Us</b></h1>
-	</div>
-
-	<div id="Contact" class="contact">
-		<h1><b>Contact Us</b></h1>
-
-<table>
-  <tr>
-    <td>Saurabh Kumar</td>
-    <td>
-<img src="/icons/mobile.png" width="30px" height="30px">
-    +91-9882925402</td>
-    <td>
-<img src="/icons/email2.png" width="20px" height="20px">
-
-    saurabh.k0402@gmail.com</td>
-  </tr>
-  <tr>
-    <td>Pavan Bansal</td>
-    <td>
-<img src="/icons/mobile.png" width="30px" height="30px">
-    +91-9882550794</td>
-    <td>
-<img src="/icons/email2.png" width="20px" height="20px">
-
-    bansal.pavan92@gmail.com</td>
-  </tr>
-  <tr>
-    <td>
-     Sukhbir Singh</td>
-    <td>
-    <img src="/icons/mobile.png" width="30px" height="30px">
-    +91-9882546092</td>
-    <td>
-<img src="/icons/email2.png" width="20px" height="20px">
-
-    sukhbir947@gmail.com</td>
-  </tr>
-  <tr>
-    <td>Bimalkant Lauhny</td>
-    <td>
-    <img src="/icons/mobile.png" width="30px" height="30px">
-    +91-9882548765</td>
-    <td>
-<img src="/icons/email2.png" width="20px" height="20px">
-
-    lauhny.bimalk@gmail.com</td>
-  </tr>
-  
-</table>
 	</div>
 </body>
 

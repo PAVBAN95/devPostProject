@@ -29,14 +29,15 @@ body{
 
 #wrapper {
     float: left;
-    width: 75%;
+    width: 70%;
     height: 100%;
 }
 
 #left_div{
-	padding: 10px;
+    padding: 10px;
     height: 623px;
     background: orange;
+    display: none;
     width: 30%;
     float: left;
 }
@@ -45,16 +46,16 @@ body{
 	padding: 20px;
     float: right;
     height: 623px;
-    background: green;
-    width: 70%;	
+    background: rgba(51, 122, 183, 0.89);;
+    width: 100%;
 }
 
 #right_div{
-	padding: 10px;
+    padding: 10px;
     float: right;
     height: 623px;
-    background: blue;
-    width: 25%;
+    background: rgba(0, 128, 89, 0.6);;
+    width: 30%;
 }
 
 .l1{
@@ -110,7 +111,7 @@ body{
 
 #list{
 	margin-top: 25px;
-	height: auto;
+    height: 260px;
     padding: 5px;
 	width: 100%;
 	background: #fff;
@@ -169,19 +170,20 @@ body{
 .tip_r{
 	display: block;
     margin-left: 42px;
-    font-size: 13px;
+    font-size: 1.1em;
+    text-decoration: underline;
 }
 
 .content_r{
 	display: inline-block;
-	font-size: 10px;
-    margin-left: 42px;	
+    margin-left: 15px;	
 }
 
 #calendar{
 	height: 140px;
     background: #fff;
     margin-bottom: 10px;
+    display: none;
 }
 
 #i1{
@@ -207,6 +209,8 @@ body{
     background:#ddd;
     margin-bottom: 5px;
     padding: 10px;
+    padding-left: 40px;
+    padding-right: 50px;
 }
 
 .timespan {
