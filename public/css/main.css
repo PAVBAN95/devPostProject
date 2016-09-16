@@ -156,7 +156,9 @@ hr {
 .butn {
 	/*border-radius: 20px;*/
 	/*margin: 50px;*/
-	width: 110px ; 
+	width: 150px;
+	height: 50px;
+	margin-left: 30px; 
 	padding: 5px 10px;
 	border: 1.5px solid #FFFFFF;
 	font-size: 20px;
@@ -207,24 +209,36 @@ hr {
 
 #loginPop {
 	font-family: 'Poiret One', cursive;
-	width: 30%;
-	margin: 15% 35%;
-	height: 30%;
 	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 	z-index: 40;
 	position: fixed;
 	display: none;
+
+	height: 250px;
+	min-width: 300px;
+	position: absolute;
+	margin: 50% 50%;
+	left: -150px;
+	top: -123px;
+	margin-top: 350px;
 }
 
 #signUpPop {
 	font-family: 'Poiret One', cursive;
-	width: 30%;
-	margin: 15% 35%;
 	height: 30%;
 	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 	z-index: 40;
 	position: fixed;
+
+	height: 250px;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	min-width: 300px;
 	display: none;
+	position: absolute;
+	margin: 50% 50%;
+	left: -150px;
+	top: -123px;
+	margin-top: 350px;
 }
 
 .Form{
@@ -302,6 +316,7 @@ th, td {
 	width: 100%;
 	height: 100%;
 	z-index: 50;
+	display: none;
 }
 
 #quotes{
