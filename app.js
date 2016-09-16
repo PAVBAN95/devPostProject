@@ -19,7 +19,17 @@ app.use(bodyParser.json());
 app.use(session({secret: "ThisIsAFu**ingSecret"}));
 
 app.get("/", function(req, res){
-	res.sendFile(__dirname + '/views/index.html');
+	if(req.session.email)
+		res.sendFile(__dirname + '/views/dashboard.html');
+	else
+		res.sendFile(__dirname + '/views/index.html');
+});
+
+app.get("/dashboard", function(req, res){
+	if(req.session.email)
+		res.sendFile(__dirname + '/views/dashboard.html');
+	else
+		res.sendFile(__dirname + '/views/index.html');
 });
 
 /*-----------------------------------------
@@ -38,7 +48,6 @@ app.post('/signup', function(req, res){
 			"email": req.body.email,
 			"pass": req.body.pass,
 			"food": [],
-			"total": {}
 		};
 
 		bcrypt.genSalt(10, function(err, salt){
@@ -60,7 +69,8 @@ app.post('/signup', function(req, res){
 
 						db.close();
 						req.session.email = user.email;
-						res.json({"success": 1, "error": false})
+						res.json({"success": 1, "error": false});
+						req.session.email = user.email;
 					});
 				});
 			});
@@ -105,6 +115,8 @@ app.post("/signin", function(req, res){
 						if(ans){
 							db.close();
 							res.json({"success": 1, "error": 0});
+							req.session.email = user.email;
+							req.session.save();
 							return;
 						}
 
@@ -137,56 +149,113 @@ app.post('/addfood', function(req, res){
 			return;
 		}
 
-		db.collection('users').find({'email': req.body.email}).count(function(err, c){
-			if(err){
-				res.json({"success": 0, "error": "Internal error"});
-				return;
-			}
-
-			if(c == 0){
-				res.json({"success": 0, "error": "Please sign in to do this!"});
-				return;
-			}
-
-			db.collection('users').update({'email': req.body.email}, {$push: {'food': food}}, function(err, result){
+		if(req.session.email){
+			db.collection('users').find({'email': req.session.email}).count(function(err, c){
 				if(err){
-					db.close();
 					res.json({"success": 0, "error": "Internal error"});
 					return;
 				}
 
-				var c2 = db.collection('users').find({'email': req.body.email}), tot, fdetails;
+				if(c == 0){
+					res.json({"success": 0, "error": "Please sign in to do this!"});
+					return;
+				}	
 
-				c2.each(function(err, d){
+				var c1 = db.collection('food').find({'foodid': food.foodid});
+
+				c1.each(function(err, d){
 					if(d != null){
-						tot = d.total;
-						var c1 = db.collection('food').find({'foodid': food.foodid});
+						fdetails = d.nutrients;
+						for(var x in fdetails){
+							food[x] = fdetails[x];
+						}
 
-						c1.each(function(err, d){
-							if(d != null){
-								fdetails = d.nutrients;
-								for(var x in fdetails){
-									if(tot.hasOwnProperty(x)){
-										tot[x] = tot[x] + fdetails[x];
-									}
-									else{
-										tot[x] = fdetails[x];
-									}
-								}
-
-								db.collection('users').update({'email': req.body.email}, {$set: {total: tot}}, function(err, result2){
-									db.close();
-									res.json({"success": 1, "error": 0});
-								});	
+						db.collection('users').update({'email': req.body.email}, {$push: {'food': food}}, function(err, result){
+							if(err){
+								db.close();
+								res.json({"success": 0, "error": "Internal error"});
+								return;
 							}
+
+							db.close();
+							res.json({"success": 1, "error": 0});
 						});
 					}
 				});
 			});
+		}
+
+		else {
+			res.json({"success": 0, "error": "Please login to continue"});
+		}
+	});
+});
+
+/*------------------------------------
+----------SHOW FOOD EATEN-------------
+------------------------------------*/
+
+app.post('/getfood', function(req, res){
+	console.log(req.session.email);
+	if(req.session.email){
+		mongoClient.connect("mongodb://127.0.0.1:27017/devPost", function(err, db){
+			if(err){
+				res.json({"success": 0, "error": 1});
+				return;
+			}
+
+			db.collection('users').find({'email': req.session.email}).count(function(err, c){
+				if(c == 0){
+					db.close();
+					res.json({'success': 0, 'error': 'Please login to continue'});
+					return;
+				}
+
+				var cursor = db.collection('users').find({'email': req.session.name});
+
+				cursor.each(function(err, doc){
+					if(doc != null){
+						res.json({"food": doc.food});
+						return;
+					}
+				});
+
+				db.close();
+			});
+
+		})
+	}
+
+	else {
+		res.json({"success": 0, "error": "Please login to continue"});
+	}
+});
+
+
+/*-------------------------------------
+-------------- TIPS -------------------
+-------------------------------------*/
+
+app.post('/gettips', function(req, res){
+	mongoClient.connect('mongodb://127.0.0.1:27017/devPost', function(err, db){
+		if(err){
+			res.json({"error": 1});
+			return;
+		}
+
+		db.collection.find({}).toArray(function(err, arr){
+			if(err){
+				db.close();
+				res.json({"error": 1});
+				return;
+			}
+
+			db.close();
+			res.json({"error": 0, "tip": arr[Math.random()*arr.length]});
 		});
 	});
 });
 
 app.listen(app.get('port'), function(){
 	console.log("Server running on port " + app.get('port'));
-})
+});

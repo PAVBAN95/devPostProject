@@ -5,8 +5,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../public/css/main.css" type="text/css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
 
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
@@ -23,7 +23,7 @@
 		@font-face
 		{
 			font-family: 'Open Sans Condensed';
-    		src: url(fonts/OpenSansCond.ttf);
+    		src: url('fonts/OpenSansCond.ttf');
 		}
 
 		@font-face
@@ -34,8 +34,8 @@
 		
 	</style>
 
-	<script src="../public/js/jquery.min.js" rel="stylesheet"> </script>
-	<script src="../public/js/bootstrap.min.js" rel="stylesheet"> </script>
+	<script src="/js/jquery.min.js" rel="stylesheet"> </script>
+	<script src="/js/bootstrap.min.js" rel="stylesheet"> </script>
 
 	<script type="text/javascript">
 		var i = 0;
@@ -57,14 +57,13 @@
 
 		function image_slider()
 		{
-			var arr = ["../public/images/1.jpg", "../public/images/2.jpg", 
-			"3.jpg","../public/images/4.jpg", "../public/images/5.jpg", "../public/images/6.jpg"];
+			var arr = ["/images/1.jpg", "/images/2.jpg", 
+			"/images/3.jpg","/images/4.jpg", "/images/5.jpg", "/images/6.jpg"];
 			var len = arr.length;
 
 			var b = document.getElementById("contain");
 			b.style.backgroundImage = "url("+arr[i]+")";
 			i = (i+1) % len;
-			console.log(i);
 			setTimeout(image_slider, 4000);
 		}
 
@@ -103,12 +102,12 @@
 				<div class="close">
 
 					<button onclick="popDownLogin()" type="button" class="btn btn-default btn-sm alignment" >
-			        	<span><img src="../public/icons/cross.png" class="alignment"></span>
+			        	<span><img src="/icons/cross.png" class="alignment"></span>
 			        </button>
 			    </div>
 
 		        <div class="Form">
-			   		<form action = "/signin" method = "POST">
+			   		<form action = "/signin" method = "POST"  name = "signinform">
 						Email<br>
 						<input type="text" name="email" placeholder="Email" >
 						<br><br>
@@ -126,13 +125,13 @@
 				<div class="close">
 
 					<button onclick="popDownSignUp()" type="button" class="btn btn-default btn-sm alignment" >
-			        	<span><img src="../public/icons/cross.png" class="alignment"></span>
+			        	<span><img src="/icons/cross.png" class="alignment"></span>
 			        </button>
 		        </div>
 
 		        <div class="Form">
 					Email<br>
-					<form action = "signup" method = "POST">
+					<form action = "signup" method = "POST" name = "signupform">
 				 		<input type="text" name="email" placeholder="Email" >
 				 		<br><br>
 				  		Password<br>
@@ -175,8 +174,8 @@
 								<h3>Let's track your diet!</h3>
 								<hr/>
 								<ul class="list-inline">
-									<li><a href="#" onclick="popUpLogin()" class="butn" style="padding-left:19px; padding-right: 19px;"><img class="icon" src="../public/icons/login2.png" />Login</a></li>
-									<li><a href="#" onclick="popUpSignUp()" class="butn"><img class="icon" src="../public/icons/signup2.png" />Sign Up</a></li>
+									<li><button onclick="popUpLogin()" class="butn" style="padding-left:19px; padding-right: 19px;"><img class="icon" src="/icons/login2.png" />Login</a></li>
+									<li><button onclick="popUpSignUp()" class="butn"><img class="icon" src="/icons/signup2.png" />Sign Up</a></li>
 								</ul>
 							</div>
 						</div>
@@ -199,20 +198,20 @@
   <tr>
     <td>Saurabh Kumar</td>
     <td>
-<img src="../public/icons/mobile.png" width="30px" height="30px">
+<img src="/icons/mobile.png" width="30px" height="30px">
     +91-9882925402</td>
     <td>
-<img src="../public/icons/email2.png" width="20px" height="20px">
+<img src="/icons/email2.png" width="20px" height="20px">
 
-    saurabhisalways4u@gmail.com</td>
+    saurabh.k0402@gmail.com</td>
   </tr>
   <tr>
     <td>Pavan Bansal</td>
     <td>
-<img src="../public/icons/mobile.png" width="30px" height="30px">
+<img src="/icons/mobile.png" width="30px" height="30px">
     +91-9882550794</td>
     <td>
-<img src="../public/icons/email2.png" width="20px" height="20px">
+<img src="/icons/email2.png" width="20px" height="20px">
 
     bansal.pavan92@gmail.com</td>
   </tr>
@@ -220,20 +219,20 @@
     <td>
      Sukhbir Singh</td>
     <td>
-    <img src="../public/icons/mobile.png" width="30px" height="30px">
+    <img src="/icons/mobile.png" width="30px" height="30px">
     +91-9882546092</td>
     <td>
-<img src="../public/icons/email2.png" width="20px" height="20px">
+<img src="/icons/email2.png" width="20px" height="20px">
 
     sukhbir947@gmail.com</td>
   </tr>
   <tr>
     <td>Bimalkant Lauhny</td>
     <td>
-    <img src="../public/icons/mobile.png" width="30px" height="30px">
+    <img src="/icons/mobile.png" width="30px" height="30px">
     +91-9882548765</td>
     <td>
-<img src="../public/icons/email2.png" width="20px" height="20px">
+<img src="/icons/email2.png" width="20px" height="20px">
 
     lauhny.bimalk@gmail.com</td>
   </tr>
@@ -241,6 +240,7 @@
 </table>
 	</div>
 
+	<script src = "/js/main.js"></script>
 
 </body>
 
