@@ -31,7 +31,7 @@ hr {
 #contain {
 	margin: 0;
 	padding: 0;
-	background: url("../public/images/1.jpg") no-repeat center center fixed;
+	background: url("/images/1.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 
