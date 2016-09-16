@@ -1,3 +1,22 @@
+/*@font-face
+{
+	font-family: 'Abel';
+    src: url('fonts/AbelRegular.ttf');
+}
+
+@font-face
+{
+	font-family: 'Open Sans Condensed';
+    src: url('fonts/OpenSansCond.ttf');
+}
+
+@font-face
+{
+	font-family: 'Poiret One';
+    src: url('fonts/PoiretOneRegular.ttf');
+}
+*/
+
 a {
 	text-decoration: none;
 }
@@ -94,7 +113,7 @@ hr {
 .intro-message > ul > li > a{
 	padding: 10px;
 }
-@media(max-width: 767px){
+@media(max-width: 627px){
 	.intro-message > h1{
 		font-size: 4em;
 	}
@@ -107,6 +126,14 @@ hr {
 	.intro-message > ul > li{
 		display: block;
 		margin-bottom: 30px;
+	}
+
+	td{
+		font-size: 20px;
+	}
+
+	h1{
+		font-size: 1.3em;
 	}
 }
 
@@ -196,21 +223,40 @@ hr {
 	float: right;
 }
 
-.About{
-	height: 1000px;
+.about{
+	height: 850px;
 	background: rgba(102,255,224,0.6);
 	margin-top:0px;
 	font-family:  'Poiret One', cursive;
 	padding:50px 10px;
 	color: #33f;
+	font-size: 25px;
 }
 
-.Contact{
-	height: 1000px;
+.contact{
+	height: 850px;
 	background: rgba(153,153,255,0.6);
 	margin-top:0px;
 	font-family:  'Poiret One', cursive;
 	padding:50px 10px;
 	color: #123;
+	font-size: 25px;
+	
+	letter-spacing: 1px;
+	overflow: scroll;
 
+}
+
+table, td, th {
+    border: 1px solid none;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
 }
