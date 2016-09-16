@@ -2,6 +2,7 @@
 (function(){
 
 	window.onload = function(){
+		document.getElementById("loading_div").style.display = "none";
 		var getfood = new XMLHttpRequest();
 
 		getfood.onreadystatechange = function(){

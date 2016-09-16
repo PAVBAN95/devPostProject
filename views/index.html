@@ -5,8 +5,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../public/css/main.css" type="text/css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/main.css" type="text/css" rel="stylesheet">
 
 	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> --><!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300" rel="stylesheet"> -->
@@ -33,8 +33,8 @@
 		
 	</style>
 
-	<script src="../public/js/jquery.min.js" rel="stylesheet"> </script>
-	<script src="../public/js/bootstrap.min.js" rel="stylesheet"> </script>
+	<script src="/js/jquery.min.js" rel="stylesheet"> </script>
+	<script src="/js/bootstrap.min.js" rel="stylesheet"> </script>
 
 	<script type="text/javascript">
 		var i = 0;
@@ -53,18 +53,6 @@
       }
     });
   });
-
-		function image_slider()
-		{
-			var arr = ["/images/1.jpg", "/images/2.jpg", 
-			"/images/3.jpg","/images/4.jpg", "/images/5.jpg", "/images/6.jpg"];
-			var len = arr.length;
-
-			var b = document.getElementById("contain");
-			b.style.backgroundImage = "url("+arr[i]+")";
-			i = (i+1) % len;
-			setTimeout(image_slider, 4000);
-		}
 
 		function popUpSignUp(){
 			var Div = document.getElementById("signUpPop").style.display = "block";
@@ -87,7 +75,7 @@
 		}
 	</script>
 </head>
-<body onload="image_slider()">
+<body>
 
 <div id="loading_div">
 	
@@ -257,6 +245,19 @@
 	</div>
 
 	<script src = "/js/main.js"></script>
+	<script>
+		(function image_slider()
+		{
+			var arr = ["/images/1.jpg", "/images/2.jpg", 
+			"/images/3.jpg","/images/4.jpg", "/images/5.jpg", "/images/6.jpg"];
+			var len = arr.length;
+
+			var b = document.getElementById("contain");
+			b.style.backgroundImage = "url("+arr[i]+")";
+			i = (i+1) % len;
+			setTimeout(image_slider, 4000);
+		})();
+	</script>
 
 </body>
 
