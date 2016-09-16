@@ -36,7 +36,7 @@ hr {
 }
 
 .bg-overlay{
-	background: rgba(0,0,0, 0.3);
+	background: rgba(0,0,0, 0.6);
 	height: 100%;
 }
 
@@ -114,6 +114,10 @@ hr {
 	padding: 10px;
 }
 @media(max-width: 627px){
+
+	#top-bar {
+		background-color: rgba(0, 0, 0, 1) !important;
+	}
 	.intro-message > h1{
 		font-size: 4em;
 	}
@@ -269,7 +273,7 @@ th, td {
     padding: 15px;
 }
 
-		.alignAbout{
+.alignAbout{
 
 	text-align: center;
 	display: inline-block;
@@ -280,7 +284,35 @@ th, td {
 	color: #123;
 }
 
+#floating_div{
+	width: 400px;
+	height: 200px;
+	position: fixed;
+	z-index: 46;
+	background: #fff;
+	margin:18% 33%;
+	border-radius: 5px;
+	padding: 30px;
+	box-shadow: 1px 2px 2px solid black;
+}
+
+#loading_div{
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+}
+
+#quotes{
+	position: relative;
+	padding-top: 20px;
+	top: 30px;
+	left: 50px;
+	font-size: 1.2em;
+}
+
 .Table{
-width: 100% !important;
-margin: 0px 10%;
+	width: 100% !important;
+	margin: 0px 10%;
 }
