@@ -29,7 +29,7 @@ app.get("/dashboard", function(req, res){
 	if(req.session.email)
 		res.sendFile(__dirname + '/views/dashboard.html');
 	else
-		res.sendFile(__dirname + '/views/index.html');
+		res.redirect("/");
 });
 
 /*-----------------------------------------
@@ -229,6 +229,15 @@ app.post('/getfood', function(req, res){
 	else {
 		res.json({"success": 0, "error": "Please login to continue"});
 	}
+});
+
+/*------------------------------------
+------------ LOG OUT -----------------
+------------------------------------*/
+
+app.get("/logout", function(req, res){
+	delete req.session.email;
+	res.redirect("/");
 });
 
 
