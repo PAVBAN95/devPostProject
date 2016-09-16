@@ -64,7 +64,6 @@
 			var b = document.getElementById("contain");
 			b.style.backgroundImage = "url("+arr[i]+")";
 			i = (i+1) % len;
-			console.log(i);
 			setTimeout(image_slider, 4000);
 		}
 
@@ -108,7 +107,7 @@
 			    </div>
 
 		        <div class="Form">
-			   		<form action = "/signin" method = "POST">
+			   		<form action = "/signin" method = "POST"  name = "signinform">
 						Email<br>
 						<input type="text" name="email" placeholder="Email" >
 						<br><br>
@@ -175,8 +174,8 @@
 								<h3>Let's track your diet!</h3>
 								<hr/>
 								<ul class="list-inline">
-									<li><a href="#" onclick="popUpLogin()" class="butn" style="padding-left:19px; padding-right: 19px;"><img class="icon" src="/icons/login2.png" />Login</a></li>
-									<li><a href="#" onclick="popUpSignUp()" class="butn"><img class="icon" src="/icons/signup2.png" />Sign Up</a></li>
+									<li><button onclick="popUpLogin()" class="butn" style="padding-left:19px; padding-right: 19px;"><img class="icon" src="/icons/login2.png" />Login</a></li>
+									<li><button onclick="popUpSignUp()" class="butn"><img class="icon" src="/icons/signup2.png" />Sign Up</a></li>
 								</ul>
 							</div>
 						</div>
@@ -241,6 +240,7 @@
 </table>
 	</div>
 
+	<script src = "/js/main.js"></script>
 
 </body>
 

@@ -25,6 +25,13 @@ app.get("/", function(req, res){
 		res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get("/dashboard", function(req, res){
+	if(req.session.email)
+		res.sendFile(__dirname + '/views/dashboard.html');
+	else
+		res.sendFile(__dirname + '/views/index.html');
+});
+
 /*-----------------------------------------
 --------------- SIGN UP -------------------
 -----------------------------------------*/
@@ -109,6 +116,7 @@ app.post("/signin", function(req, res){
 							db.close();
 							res.json({"success": 1, "error": 0});
 							req.session.email = user.email;
+							req.session.save();
 							return;
 						}
 
