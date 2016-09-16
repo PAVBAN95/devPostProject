@@ -138,7 +138,8 @@ app.post("/signin", function(req, res){
 
 app.post('/addfood', function(req, res){
 	var food = {
-		"id": req.body.foodid,
+		//"id": req.body.foodid,
+		"category": req.body.category,
 		"name": req.body.foodname,
 		"date": req.body.date
 	}
@@ -161,6 +162,17 @@ app.post('/addfood', function(req, res){
 					return;
 				}	
 
+				db.collection('users').update({'email': req.session.email}, {$push: {'food': food}}, function(err, result){
+					if(err){
+						db.close();
+						res.json({"success": 0, "error": "Internal error"});
+						return;
+					}
+
+					res.json({"success": 1, "error": 0, "food": food});
+				});
+
+				/* LEFT FOR LATER!!! ;)
 				var c1 = db.collection('food').find({'foodid': food.foodid});
 
 				c1.each(function(err, d){
@@ -182,6 +194,8 @@ app.post('/addfood', function(req, res){
 						});
 					}
 				});
+
+				*/
 			});
 		}
 
@@ -196,7 +210,6 @@ app.post('/addfood', function(req, res){
 ------------------------------------*/
 
 app.post('/getfood', function(req, res){
-	console.log(req.session.email);
 	if(req.session.email){
 		mongoClient.connect("mongodb://127.0.0.1:27017/devPost", function(err, db){
 			if(err){
@@ -211,11 +224,11 @@ app.post('/getfood', function(req, res){
 					return;
 				}
 
-				var cursor = db.collection('users').find({'email': req.session.name});
+				var cursor = db.collection('users').find({'email': req.session.email});
 
 				cursor.each(function(err, doc){
 					if(doc != null){
-						res.json({"food": doc.food});
+						res.json({"success": 1, "food": doc.food});
 						return;
 					}
 				});

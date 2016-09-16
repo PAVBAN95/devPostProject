@@ -111,10 +111,10 @@ body{
 
 #list{
 	margin-top: 25px;
-    height: 260px;
     padding: 5px;
 	width: 100%;
 	background: #fff;
+    overflow: auto;
 }
 
 #ques{
@@ -217,3 +217,7 @@ body{
     float: right;
 }
 
+#foodHistory {
+    height: 220px;
+    overflow: auto;
+}
