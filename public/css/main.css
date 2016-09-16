@@ -195,9 +195,9 @@ hr {
 
 #loginPop {
 	font-family: 'Poiret One', cursive;
-	width: 40%;
-	margin: 10% 30%;
-	height: 40%;
+	width: 30%;
+	margin: 15% 35%;
+	height: 30%;
 	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 	z-index: 40;
 	position: fixed;
@@ -206,9 +206,9 @@ hr {
 
 #signUpPop {
 	font-family: 'Poiret One', cursive;
-	width: 40%;
-	margin: 10% 30%;
-	height: 40%;
+	width: 30%;
+	margin: 15% 35%;
+	height: 30%;
 	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 	z-index: 40;
 	position: fixed;
@@ -259,4 +259,15 @@ table {
 
 th, td {
     padding: 15px;
+}
+
+		.alignAbout{
+
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+
+.Font{
+	color: #123;
 }
