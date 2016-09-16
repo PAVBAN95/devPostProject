@@ -89,44 +89,30 @@
 				<div id="main_input">
 					<span id="ques">What you ate today?</span>
 
-					 <select id="s1">
-					  <option value="category">Select a food category?</option>
-					  <option value="fruits">Fruits</option>
-					  <option value="vegetables">Vegetables</option>
-					  <option value="non_veg">Non-veg</option>
-					  <option value="junks">Junk foods</option>
-					  <option value="others">Others</option>
-					</select> 
+					<form  action = "#" method = "POST" name = "addfoodform">
+						<select id="s1" name = "category">
+						  <option value="category">Select a food category?</option>
+						  <option value="fruits">Fruits</option>
+						  <option value="vegetables">Vegetables</option>
+						  <option value="non_veg">Non-veg</option>
+						  <option value="junks">Junk foods</option>
+						  <option value="others">Others</option>
+						</select> 
 
-					<input type="text" id="item" name="item">
-					<button type="submit" id="submit" name="submit">Submit</button>
+						<input type="text" id="item" name="item">
+						<input type="submit" id="submit" name="submit" value="Submit">
+					</form>
 
 				</div>
 
 				<div id="list">
 					<span id="title_list">Past's Meal...</span>
-					<div class="list_item">
-						<span class="food_item">Chowmin</span>
-						<span class="food_categ">(Junk Food)</span>
-						<span class="timespan">16:00</span>
-					</div>
-					<div class="list_item">
-						<span class="food_item">Chowmin</span>
-						<span class="food_categ">(Junk Food)</span>
-						<span class="timespan">16:00</span>
-					</div>	
-					<div class="list_item">
-						<span class="food_item">Chowmin</span>
-						<span class="food_categ">(Junk Food)</span>
-						<span class="timespan">16:00</span>
-					</div>
-					<div class="list_item">
-						<span class="food_item">Chowmin</span>
-						<span class="food_categ">(Junk Food)</span>
-						<span class="timespan">16:00</span>
+					<div id = "foodHistory">
+						
 					</div>
 				</div>
 			</div>
+			<!--
 			<div id="left_div">	
 
 				<div class="l1" id="i1">
@@ -143,11 +129,12 @@
 				</div>
 
 			</div>
+			-->
 		</div>
 
 		<div id="right_div">	
-			<div id="calendar">
-			</div>
+			<!--<div id="calendar">
+			</div>-->
 
 			<div class="r1">
 				<span class="tip_r">TIP #1</span>
@@ -172,6 +159,7 @@
 	</div>
 
 	</div>
+	<script type="text/javascript" src = "/js/dashboard.js"></script>
 </body>
 
 </html>

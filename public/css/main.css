@@ -36,7 +36,7 @@ hr {
 }
 
 .bg-overlay{
-	background: rgba(0,0,0, 0.3);
+	background: rgba(0,0,0, 0.6);
 	height: 100%;
 }
 
@@ -114,6 +114,10 @@ hr {
 	padding: 10px;
 }
 @media(max-width: 627px){
+
+	#top-bar {
+		background-color: rgba(0, 0, 0, 1) !important;
+	}
 	.intro-message > h1{
 		font-size: 4em;
 	}
