@@ -19,7 +19,10 @@ app.use(bodyParser.json());
 app.use(session({secret: "ThisIsAFu**ingSecret"}));
 
 app.get("/", function(req, res){
-	res.sendFile(__dirname + '/views/index.html');
+	if(req.session.email)
+		res.sendFile(__dirname + '/views/dashboard.html');
+	else
+		res.sendFile(__dirname + '/views/index.html');
 });
 
 /*-----------------------------------------
