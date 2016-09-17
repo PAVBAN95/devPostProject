@@ -115,6 +115,14 @@ hr {
 }
 @media(max-width: 627px){
 
+	table img{
+		display: none;
+	}
+
+	.mobile_td{
+		display: none;
+	}
+
 	#top-bar {
 		background-color: rgba(0, 0, 0, 1) !important;
 	}
@@ -219,8 +227,9 @@ hr {
 	position: absolute;
 	margin: 50% 50%;
 	left: -150px;
+	position: fixed;
 	top: -123px;
-	margin-top: 350px;
+	margin-top: 300px;
 }
 
 #signUpPop {
@@ -238,7 +247,9 @@ hr {
 	margin: 50% 50%;
 	left: -150px;
 	top: -123px;
-	margin-top: 350px;
+	margin-top: 300px;
+	position: fixed;
+
 }
 
 .Form{
@@ -252,25 +263,26 @@ hr {
 }
 
 .about{
-
-	background: rgba(102,255,224,0.6);
-	margin-top:0px;
-	font-family:  'Poiret One', cursive;
-	padding:50px 40px;
-	color: #33f;
+	background: rgba(102, 120, 255, 0.38);
+	margin-top: 0px;
+	font-family: 'Poiret One', cursive;
+	padding: 50px 40px;
+	color: #4f504f;
 	font-size: 25px;
+	padding-top: 28px;
 }
 
 .contact{
-	
-	background: rgba(153,153,255,0.6);
-	margin-top:-1px;
-	font-family:  'Poiret One', cursive;
-	padding:50px 10px 100px 10px;
-	color: #123;
+	background: rgba(153, 255, 158, 0.56);
+	margin-top: -1px;
+	font-family: 'Poiret One', cursive;
+	padding: 50px 10px 100px 10px;
+	color: RGBA(17, 51, 25, 0.94);
 	font-size: 25px;
 	letter-spacing: 1px;
-
+	padding-top: 20px;
+	padding-bottom: 40px;
+	overflow: hidden;
 }
 
 table, td, th {
@@ -279,6 +291,7 @@ table, td, th {
 }
 
 table {
+	font-size: 0.8em;
     border-collapse: collapse;
     width: 100%;
 }
@@ -330,4 +343,12 @@ th, td {
 .Table{
 	width: 100% !important;
 	margin: 0px 10%;
+}
+
+#contact_us_title{
+	display: inline-block;
+	text-align: center;
+	color: #4f504f;
+	font-size: 0.9em;
+	width: 100%;	
 }

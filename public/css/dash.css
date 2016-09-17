@@ -107,6 +107,7 @@ body{
 	height: 280px;
 	width: 100%;
 	background: #fff;
+    overflow: hidden;
 }
 
 #list{
