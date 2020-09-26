@@ -90,6 +90,7 @@ hr {
 	padding-top: 20%;
 	padding-bottom: 20%;
 }
+
 .intro-message > h1{
 	font-size: 10em;
 	font-weight: bold;
@@ -99,6 +100,7 @@ hr {
 	letter-spacing: 2px;
 	/*text-shadow: 3px 3px 3px #FECC01;*/
 }
+
 .intro-message > h3{
 	font-size: 3em;
 	letter-spacing: 2px;
@@ -107,14 +109,16 @@ hr {
 	padding-bottom: 5%;
 	/*border-bottom: 3px solid #f8f8f8;*/
 }
+
 .intro-message > ul{
 	margin-top: 50px;
 }
+
 .intro-message > ul > li > a{
 	padding: 10px;
 }
-@media(max-width: 627px){
 
+@media(max-width: 627px){
 	table img{
 		display: none;
 	}
@@ -126,15 +130,19 @@ hr {
 	#top-bar {
 		background-color: rgba(0, 0, 0, 1) !important;
 	}
+	
 	.intro-message > h1{
 		font-size: 4em;
 	}
+	
 	.intro-message > h3{
 		font-size: 1.5em;
 	}
+	
 	.intro-message > ul{
 		margin-top: 40px;
 	}
+	
 	.intro-message > ul > li{
 		display: block;
 		margin-bottom: 30px;
@@ -186,6 +194,7 @@ hr {
 #about-content{
 	padding: 50px 0 50px 0;
 }
+
 #about-content > h1 {
 	font-size: 4em;
 	font-weight: bold;
