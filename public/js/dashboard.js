@@ -1,4 +1,3 @@
-
 (function(){
 
 	window.onload = function(){
@@ -9,7 +8,7 @@
 			if(getfood.readyState == 4){
 				var res = JSON.parse(getfood.responseText).food, i, newItem, elems;
 
-				for(i = 0; i < res.length; ++i){
+				for (i = 0; i < res.length; ++i) {
 					newItem = createItem(res[i]);
 					elems = document.getElementsByClassName("list_item");
 					if(elems.length){
@@ -20,7 +19,6 @@
 						document.getElementById("foodHistory").appendChild(newItem);
 					}
 				}
-
 			}
 		}
 
@@ -44,7 +42,6 @@
 		newItem.appendChild(span1);
 		newItem.appendChild(span2);
 		newItem.appendChild(span3);
-
 		return newItem;
 	}
 
@@ -62,7 +59,7 @@
 
 						var newItem = createItem(res.food);
 
-						if(elems.length){
+						if (elems.length) {
 							document.getElementById("foodHistory").insertBefore(newItem, elems[0]);
 						}
 
