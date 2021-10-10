@@ -1,7 +1,7 @@
 {
   "name": "dev-post-project",
   "version": "0.0.1",
-  "description": "A diet tracking app",
+  "description": "A diet tracking web app",
   "main": "bootstrap.min.js",
   "scripts": {
     "test": "node main.js",
