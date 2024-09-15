@@ -1,5 +1,4 @@
 (function(){
-	
 	window.onload = function(){
 		document.getElementById("loading_div").style.display = "none";
 	}
