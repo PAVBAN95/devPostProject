@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saurabh0402/devPostProject.git"
+    "url": "git+https://github.com/PAVBAN95/devPostProject.git"
   },
   "keywords": [
     "node",
@@ -21,9 +21,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saurabh0402/devPostProject/issues"
+    "url": "https://github.com/PAVBAN95/devPostProject/issues"
   },
-  "homepage": "https://github.com/saurabh0402/devPostProject#readme",
+  "homepage": "https://github.com/PAVBAN95/devPostProject",
   "dependencies": {
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
